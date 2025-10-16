@@ -481,23 +481,51 @@ $(this).fadeTo("fast", 0.8);
 <div class="grid_2"><div class="vertical_line2"></div></div>
     <div class="grid_10">		
 		    <div class="ribbon2">Contact Me</div>
-		    
-		    <!-- CONTACT FORM -->
-            <div id="contact-area">
 		
-			<form method="post" action="#">
-				<label for="Name">Name:</label>
-				<input type="text" name="Name" id="Name" />
-	
-				<label for="Email">Email:</label>
-				<input type="text" name="Email" id="Email" />
-				
-				<label for="Message">Message:</label><br />
-				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+        
+		    <!-- CONTACT FORM -->
+<div id="contact-area">
+  <form id="contact-form">
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" id="Name" required />
 
-				<input type="submit" name="submit" value="Submit" class="submit-button" />
-            </form-->
-			
+    <label for="Email">Email:</label>
+    <input type="email" name="Email" id="Email" required />
+
+    <label for="Message">Message:</label><br />
+    <textarea name="Message" rows="10" cols="40" id="Message" required></textarea>
+
+    <input type="submit" value="Send" class="submit-button" />
+  </form>
+
+  <p id="status-message"></p>
+</div>
+
+<!-- EmailJS script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("rMK5jTtNZK1Sv042f"); 
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const templateParams = {
+      Name: document.getElementById('Name').value,
+      Email: document.getElementById('Email').value,
+      Message: document.getElementById('Message').value
+    };
+
+    emailjs.send("service_hjob54k", "template_2l2z8a7", templateParams)
+      .then(function(response) {
+         document.getElementById('status-message').innerText = "Message sent successfully!";
+      }, function(error) {
+         document.getElementById('status-message').innerText = "Failed to send message. Please try again later.";
+      });
+  });
+</script>
+
 
 	    <div class="item_tittle"> 
         <h1></h1>
