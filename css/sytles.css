@@ -21,7 +21,7 @@ a:link {color:#535353;}
 a:visited {color:#535353}  
 
 h1 {
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	color: #000;
 	font-size: 60px;
 	text-align:left;
@@ -50,7 +50,7 @@ img.floatLeft {
 }
 .item p {
 	color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
     font-size: 12px;
     line-height: 1.5em;
     text-align: justify;
@@ -58,7 +58,7 @@ img.floatLeft {
 .item_tittle h1 {
 	font-size: 24px;
 	font-weight:normal;
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	text-align: left;
 	color: #675656;
 	padding: 10px 0 0;
@@ -69,7 +69,7 @@ img.floatLeft {
     border-radius: 3px 3px 3px 3px;
     color: #ffffff;
     float: right;
-    font-family: 'PT Sans Narrow', cursive;
+    font-family: 'Georgia', cursive;
     font-size: 16px;
     font-weight: bold;
     margin: 7px 0 0;
@@ -87,7 +87,7 @@ img.floatLeft {
 .item_tittle h3{
 	font-size: 14px;
 	font-weight:normal;
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	text-align: right;
 	color:#000;
 }
@@ -177,7 +177,7 @@ img.floatLeft {
 	background-position: right top;
 }
 #name_tittle h1{
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	color: #06910f;
 	font-size: 50px;
 	text-align:left;
@@ -203,20 +203,20 @@ img.floatLeft {
 	text-align: right;
 }
 .work_list h1{
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	font-size: 24px;
 	color:#1b9f23;
 	margin: 0px 0 0 30px;
 }
 .work_list h2{
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	font-size: 18px;
 	color: #f10707;
 	margin: 0 0 0 30px; 
 	text-align: left;
 }
 .work_list h3{
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	font-size: 18px;
 	color:#000000;
 	margin: 0 0 0 30px; 
@@ -225,7 +225,7 @@ img.floatLeft {
 	width: 390px;
 }
 .work_list ul{
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'Georgia', sans-serif;
 	line-height:  1.5em;
 	color: #74767a;
 	font-size: 18px;
@@ -261,7 +261,7 @@ img.floatLeft {
     color: #1b9f23;
     font-size: 30px;
     width: 390px;
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	font-weight:bold;
 	border-bottom: 1px dotted #1b579e;
 	border-top: 1px dotted #1B579E;
@@ -271,7 +271,7 @@ img.floatLeft {
     color: #1b9f23;
     font-size: 30px;
     width: 390px;
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	font-weight:bold;
 	border-bottom: 3px solid #bebebe;
 	border-style:dotted;
@@ -280,7 +280,7 @@ img.floatLeft {
 .ribbon_portfolio{
 	border-bottom: 3px dotted #BEBEBE;
     color: #1b9f23;
-    font-family: 'PT Sans Narrow',cursive;
+    font-family: 'Georgia', cursive;
     font-size: 30px;
     font-weight: bold;
     width: 865px;
@@ -305,7 +305,7 @@ img.floatLeft {
 }
 .year{
     height:100px;
-    font-family: 'PT Sans Narrow', cursive;
+    font-family: 'Georgia', cursive;
     font-size:22px;
     color:#737475;
     padding:  0 0 0 10px;
@@ -314,14 +314,14 @@ img.floatLeft {
 #skill_list ul{
     list-style-type: none;
     text-align:right;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Georgia', sans-serif;
     font-size: 20px;
     line-height: 1.74em;
 }
 #skill_list2 ul{
     list-style-type: none;
     text-align:left;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Georgia', sans-serif;
     font-size: 18px;
     line-height: 1.5em;
 	font-weight: bold;
@@ -443,7 +443,7 @@ img.floatLeft {
 #contact-area {
 	width: 429px;
 	margin: 15px 0 0;
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'Georgia', sans-serif;
     color: #000000;
     font-size: 12px;
     font-weight:bold;
@@ -452,7 +452,7 @@ img.floatLeft {
 #contact-area input, #contact-area textarea {
 	padding: 5px;
 	width: 310px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 	font-size: 12px;
 	margin: 0px 0px 10px 0px;
 	border: 1px solid #1b9f23;
@@ -472,7 +472,7 @@ img.floatLeft {
 	margin: 0 36px 0 0;
 	background-color: #1b9f23;
 	color:#000000;
-	font-family: 'PT Sans Narrow',sans-serif;
+	font-family: 'Georgia',sans-serif;
     font-size: 18px;
 	font-weight:bold;
 }
@@ -488,7 +488,7 @@ label {
 /* ===WHY ME  ===*/	
 .why_me h1{
     color: #1b9f23;
-    font-family: 'PT Sans Narrow',cursive;
+    font-family: 'Georgia', cursive;
     font-size: 24px;
     margin: 0 0 0 18px;
     text-align: left;
@@ -497,7 +497,7 @@ label {
 	}
 .why_me ul{
     color: #1b9f23;
-    font-family: Arial, Helvetica, sans-serif;
+    fofont-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
     font-size: 12px;
     line-height: 1.5em;
     margin: 15px 0 0 -15px;
