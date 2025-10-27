@@ -80,7 +80,7 @@ img.floatLeft {
 .item_tittle h2 {
 	font-size: 18px;
 	font-weight:normal;
-	font-family: 'PT Sans Narrow', cursive;
+	font-family: 'Georgia', cursive;
 	text-align: left;
 	color:#1b9f23;
 }
@@ -221,7 +221,7 @@ img.floatLeft {
 	color:#000000;
 	margin: 0 0 0 30px; 
 	text-align: left;
-	border-bottom: 2px solid #1B579E;
+	border-bottom: 2px solid #1b9f23;
 	width: 390px;
 }
 .work_list ul{
@@ -482,7 +482,7 @@ label {
     font-size: 1.4em;
     padding-top: 0;
     text-align: left;
-    width: 70px;
+    width: 90px;
 }
 
 /* ===WHY ME  ===*/	
@@ -496,7 +496,7 @@ label {
 	font-weight:bold;
 	}
 .why_me ul{
-    color: #1b9f23;
+    color: #000000;
     fofont-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
     font-size: 12px;
     line-height: 1.5em;

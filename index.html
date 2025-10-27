@@ -32,19 +32,7 @@
 <script language="javascript" src="js/jquery.tips.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
   
-<!--script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35395353-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script-->
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ESL9YWEHQ"></script>
@@ -146,11 +134,15 @@ $(this).fadeTo("fast", 0.8);
     <div id="header"><!-- Header -->
 	
 	<ul class="social_panel">
-				<li><a href="https://www.facebook.com/barth.patrick/" title="Facebook Profile" class="blue-darker"><img src="img/facebook.png" width="24" height="24" alt="Facebook Profile"/></a></li>
-				<li><a href="https://www.instagram.com/brthpatrick" title="Instagram Profile" class="blue"><img src="img/instagram.png" width="24" height="24" alt="Twitter Profile"/></a></li>
-				<li><a href="https://www.linkedin.com/in/barthpatrick/" title="LinkedIn Profile" class="blue-dark"><img src="img/linkedin.png" width="24" height="24" alt="Linked In Profile"/></a></li>
-            </ul> 
+				<li><a href="https://www.facebook.com/barth.patrick/" title="Facebook Profile" class="blue-darker" target="_blank" rel="noopener noreferrer"><img src="img/facebook.png" width="24" height="24" alt="Facebook Profile"/></a></li>
+
+        <li><a href="https://www.instagram.com/brthpatrick" title="Instagram Profile" class="blue" target="_blank" rel="noopener noreferrer"><img src="img/instagram.png" width="24" height="24" alt="Instagram Profile"/></a></li>
+ 
+        <li><a href="https://www.linkedin.com/in/barthpatrick/" title="LinkedIn Profile" class="blue-dark" target="_blank" rel="noopener noreferrer"><img src="img/linkedin.png" width="24" height="24" alt="LinkedIn Profile"/></a></li>
+
+  </ul> 
     </div><!-- End Header -->
+
 <div class="container_24">
 
 <div class="grid_1"><div class="holder"></div></div>
@@ -177,7 +169,7 @@ $(this).fadeTo("fast", 0.8);
         <div class="work_list">
 
 		<h1>AVAILABLE FOR :</h1>
-         <h3>SOFTWARE DEVELOPMENT, WEB DEVELOPMENT, AI]</h3>
+         <h3>SOFTWARE DEVELOPMENT, WEB DEVELOPMENT, AI</h3>
          <h2>Download CV</h2>
          <ul><li>
 				<a target="_blank" title="English RESUME - Updated on 2025.09.25" href="https://github.com/brthpatrick/barthpatrick.github.io/blob/master/Barth_Patrick_CV.pdf">[EN] </a>
@@ -480,7 +472,7 @@ $(this).fadeTo("fast", 0.8);
 		    <div class="ribbon2">Contact Me</div>
 		
         
-		    <!-- CONTACT FORM -->
+<!-- CONTACT FORM -->
 <div id="contact-area">
   <form id="contact-form">
     <label for="Name">Name:</label>
@@ -492,6 +484,12 @@ $(this).fadeTo("fast", 0.8);
     <label for="Message">Message:</label><br />
     <textarea name="Message" rows="10" cols="40" id="Message" required></textarea>
 
+    <div id="captcha-container">
+      <label for="captcha-input">Captcha:</label>
+      <div id="captcha-text"></div>
+      <input type="text" id="captcha-input" placeholder="Type the code above" required />
+    </div>
+
     <input type="submit" value="Send" class="submit-button" />
   </form>
 
@@ -502,26 +500,50 @@ $(this).fadeTo("fast", 0.8);
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function() {
-    emailjs.init("rMK5jTtNZK1Sv042f"); 
+    emailjs.init("rMK5jTtNZK1Sv042f");
   })();
+
+  function generateCaptcha() {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    let captcha = "";
+    for (let i = 0; i < 5; i++) {
+      captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById("captcha-text").innerText = captcha;
+    return captcha;
+  }
+
+  let currentCaptcha = generateCaptcha();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    const enteredCaptcha = document.getElementById('captcha-input').value.trim().toUpperCase();
+    if (enteredCaptcha !== currentCaptcha) {
+      document.getElementById('status-message').innerText = "Incorrect captcha, please try again.";
+      currentCaptcha = generateCaptcha();
+      return;
+    }
+
     const templateParams = {
-      Name: document.getElementById('Name').value,
-      Email: document.getElementById('Email').value,
-      Message: document.getElementById('Message').value
+      name: document.getElementById('Name').value,
+      email: document.getElementById('Email').value,
+      message: document.getElementById('Message').value
     };
+
+    document.getElementById('status-message').innerText = "Sending...";
 
     emailjs.send("service_hjob54k", "template_2l2z8a7", templateParams)
       .then(function(response) {
          document.getElementById('status-message').innerText = "Message sent successfully!";
+         document.getElementById('contact-form').reset();
+         currentCaptcha = generateCaptcha();
       }, function(error) {
          document.getElementById('status-message').innerText = "Failed to send message. Please try again later.";
       });
   });
 </script>
+
 
 
 	    <div class="item_tittle"> 
